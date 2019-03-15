@@ -1,6 +1,6 @@
 local constants = require "kong.constants"
 local singletons = require "kong.singletons"
-local responses = require "kong.pdk.responses"
+local responses = require "kong.pdk.response"
 local session = require "kong.plugins.session.session"
 local ngx_set_header = ngx.req.set_header
 
