@@ -1,6 +1,6 @@
 local constants = require "kong.constants"
 local singletons = require "kong.singletons"
-local responses = require "kong.tools.responses"
+local responses = require "kong.responses"
 local session = require "kong.plugins.session.session"
 local ngx_set_header = ngx.req.set_header
 
@@ -39,7 +39,7 @@ function _M.execute(conf)
   -- check if incoming request is trying to logout
   if session.logout(conf) then
     s:destroy()
-    return responses.send_HTTP_OK()
+    return responses.exit(200)
   end
 
   
