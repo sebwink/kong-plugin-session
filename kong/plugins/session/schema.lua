@@ -30,7 +30,7 @@ return {
     cookie_samesite = { 
       type = "string", 
       default = "Strict", 
-      one_of = { "Strict", "Lax", "off" }
+      -- one_of = { "Strict", "Lax", "off" }
     },
     cookie_httponly = { type = "boolean", default = true },
     cookie_secure = { type = "boolean", default = true },
